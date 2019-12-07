@@ -1,0 +1,68 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Details</title>
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<style>
+
+.container{
+    width:40%;
+    margin:auto;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2>Product List</h2>
+    <hr>
+
+    <form action="/create">
+
+
+                {%  csrf_token %}
+            <label class="form-group" for="product_code">Product Code: </label>
+            <input class="form-control" type="text" name="product_code"><br>
+
+            <label class="form-group" for="product_name">Product Name: </label>
+            <input class="form-control" type="text" name="product_name"><br>
+
+
+            <label class="form-group" for="description">Description: </label>
+            <input class="form-control" type="text" name="description"><br>
+
+            <label class="form-group" for="date">Date : </label>
+            <input class="form-control" type="text" name="date"><br>
+
+            <label class="form-group" for="price">Price </label>
+            <input class="form-control" type="text" name="price"><br>
+
+            <input class="btn btn-success" type="submit" value="Create">
+
+
+        </form>
+        <br>
+
+
+</div>
+</div>
+
+</body>
+</html>

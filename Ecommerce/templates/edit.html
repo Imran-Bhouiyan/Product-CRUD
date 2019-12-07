@@ -1,0 +1,65 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+
+.container{
+    width:40%;
+    margin:auto;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div class="small_div">
+
+<div class="container">
+    <br>
+    <h2>Product List</h2>
+    <hr>
+
+    <form action="/update/{{ products.id }}">
+
+        {% csrf_token %}
+
+        <label class="form-group" for="product_code">Product Code: </label>
+        <input class="form-control" type="text" name="product_code" value="{{ productss.product_code }}" placeholder="{{ productss.product_code }}">
+
+
+        <label class="form-group" for="product_name">Product Name: </label>
+        <input class="form-control" type="text" name="product_name" value="{{ productss.product_name }}" placeholder="{{ productss.product_name }}">
+
+        <label class="form-group" for="description">Description: </label>
+        <input class="form-control" type="txt" name="description" value="{{ productss.description }}" placeholder="{{ products.description }}">
+
+        <label class="form-group" for="date">Date: </label>
+        <input class="form-control" type="text" name="date" value="{{ products.date }}" placeholder="{{ products.date }}">
+
+        <label class="form-group" for="price">Price: </label>
+        <input class="form-control" type="text" name="price" value="{{ products.price }}" placeholder="{{ products.price }}">
+
+        <br>
+
+        <input class="btn btn-primary" type="submit" value="Update">
+
+    </form>
+
+
+</div>
+</div>
+
+</body>
+</html>
